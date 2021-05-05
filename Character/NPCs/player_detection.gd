@@ -1,6 +1,6 @@
 extends "res://Character/template_character.gd"
 
-
+const MAX_DETECTION_RANGE : int = 640;
 const FOV_TOLERANCE : int = 20;
 const RED : Color = Color(1.0,0.25,0.25);
 const WHITE : Color = Color(1,1,1);
@@ -34,8 +34,9 @@ func player_in_los():
 		return false;
 
 	var distance_to_player = player.global_position.distance_to(global_position);
+	var player_in_range = distance_to_player < MAX_DETECTION_RANGE;
 
-	if los_obstacle.collider == player:
+	if los_obstacle.collider == player and player_in_range:
 		return true;
 	else:
 		return false;
