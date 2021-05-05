@@ -1,6 +1,7 @@
 extends "res://Character/template_character.gd"
 
 var motion : Vector2 = Vector2();
+onready var torch : Light2D = $Torch;
 
 func _physics_process(delta):
     update_motion();
@@ -21,3 +22,7 @@ func update_motion():
         motion.x = clamp(motion.x+SPEED,0,MAX_SPEED);
     else:
         motion.x = lerp(motion.x,0,FRICTION);
+
+func _input(event):
+    if Input.is_action_just_pressed("torch_toggle"):
+        torch.enabled = !torch.enabled;
