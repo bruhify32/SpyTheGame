@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=102 format=2]
+[gd_resource type="TileSet" load_steps=108 format=2]
 
 [ext_resource path="res://GFX/Tilesheet/tilesheet_complete.png" type="Texture" id=1]
 
@@ -301,6 +301,30 @@ points = PoolVector2Array( 62.4167, -1.86108, 59.6389, 30.7778, 4.08337, 34.25, 
 
 [sub_resource type="ConvexPolygonShape2D" id=100]
 points = PoolVector2Array( 56.2937, 11.7948, 63.1256, 26.6643, 61.1162, 47.16, 41.0223, 61.2258, 14.0966, 58.0107, 6.05908, 49.9732, 1.23645, 30.2812, 6.86279, 11.7948, 19.321, 4.15915, 34.1904, 2.95352 )
+
+[sub_resource type="NavigationPolygon" id=101]
+vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=102]
+vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=103]
+vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=104]
+vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=105]
+vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=106]
+vertices = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [resource]
 0/name = "Wall"
@@ -688,7 +712,7 @@ points = PoolVector2Array( 56.2937, 11.7948, 63.1256, 26.6643, 61.1162, 47.16, 4
 3/autotile/tile_size = Vector2( 64, 64 )
 3/autotile/spacing = 0
 3/autotile/occluder_map = [  ]
-3/autotile/navpoly_map = [  ]
+3/autotile/navpoly_map = [ Vector2( 0, 0 ), SubResource( 101 ), Vector2( 1, 0 ), SubResource( 102 ), Vector2( 2, 0 ), SubResource( 103 ), Vector2( 3, 0 ), SubResource( 104 ), Vector2( 4, 0 ), SubResource( 105 ), Vector2( 5, 0 ), SubResource( 106 ) ]
 3/autotile/priority_map = [ Vector3( 4, 0, 2 ) ]
 3/autotile/z_index_map = [  ]
 3/occluder_offset = Vector2( 0, 0 )
