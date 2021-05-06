@@ -1,38 +1,28 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Tiles/TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Character/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Character/template_character.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Character/NPCs/SecurityCamera.tscn" type="PackedScene" id=4]
 
 [node name="TemplateLevel" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Navigation2D"]
 tile_set = ExtResource( 1 )
 collision_layer = 2
 collision_mask = 5
 format = 1
-tile_data = PoolIntArray( 0, 2, 0, 1, 2, 2, 2, 2, 2, 3, 2, 2, 4, 2, 2, 5, 2, 2, 6, 2, 2, 7, 2, 2, 8, 2, 2, 9, 2, 2, 10, 2, 2, 11, 2, 2, 12, 2, 2, 13, 2, 2, 14, 2, 2, 15, 2, 1, 65536, 2, 65538, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 3, 0, 65541, 3, 0, 65542, 3, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 3, 0, 65547, 3, 0, 65548, 3, 0, 65549, 3, 0, 65550, 3, 0, 65551, 2, 65538, 131072, 2, 65538, 131073, 3, 0, 131074, 3, 2, 131075, 3, 0, 131076, 3, 0, 131077, 3, 0, 131078, 3, 0, 131079, 3, 0, 131080, 3, 2, 131081, 3, 0, 131082, 3, 0, 131083, 3, 0, 131084, 3, 0, 131085, 2, 65541, 131086, 3, 0, 131087, 2, 65538, 196608, 2, 65538, 196609, 3, 0, 196610, 3, 2, 196611, 3, 0, 196612, 2, 0, 196613, 2, 5, 196614, 3, 0, 196615, 3, 2, 196616, 3, 0, 196617, 3, 0, 196618, 2, 65542, 196619, 2, 2, 196620, 2, 2, 196621, 2, 65537, 196622, 3, 0, 196623, 2, 65538, 262144, 2, 65538, 262145, 3, 0, 262146, 3, 4, 262147, 3, 0, 262148, 2, 65538, 262149, 3, 0, 262150, 3, 0, 262151, 3, 2, 262152, 3, 4, 262153, 3, 0, 262154, 3, 0, 262155, 3, 0, 262156, 3, 0, 262157, 3, 0, 262158, 3, 0, 262159, 2, 65538, 327680, 2, 65538, 327681, 3, 0, 327682, 3, 4, 327683, 3, 0, 327684, 2, 65536, 327685, 2, 5, 327686, 3, 0, 327687, 3, 2, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 2, 196614, 327692, 3, 0, 327693, 3, 2, 327694, 3, 0, 327695, 2, 65538, 393216, 2, 65538, 393217, 3, 0, 393218, 3, 2, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, 393222, 3, 0, 393223, 3, 4, 393224, 3, 2, 393225, 3, 4, 393226, 3, 0, 393227, 3, 0, 393228, 3, 0, 393229, 3, 4, 393230, 3, 0, 393231, 2, 65538, 458752, 2, 65538, 458753, 3, 0, 458754, 3, 0, 458755, 3, 0, 458756, 3, 0, 458757, 3, 0, 458758, 3, 0, 458759, 3, 0, 458760, 3, 0, 458761, 3, 0, 458762, 3, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0, 458767, 2, 65538, 524288, 2, 65536, 524289, 2, 2, 524290, 2, 2, 524291, 2, 2, 524292, 2, 2, 524293, 2, 2, 524294, 2, 2, 524295, 2, 2, 524296, 2, 2, 524297, 2, 2, 524298, 2, 2, 524299, 2, 2, 524300, 2, 2, 524301, 2, 2, 524302, 2, 2, 524303, 2, 65537 )
+tile_data = PoolIntArray( 0, 2, 0, 1, 2, 2, 2, 2, 2, 3, 2, 2, 4, 2, 2, 5, 2, 1, 65536, 2, 65538, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 3, 0, 65541, 2, 65538, 131072, 2, 65536, 131073, 2, 2, 131074, 2, 2, 131075, 2, 2, 131076, 2, 2, 131077, 2, 65537 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 253.619, 136.154 )
+position = Vector2( 88.156, 86.6565 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.235294, 0.180392, 0.180392, 1 )
+color = Color( 0.321569, 0.278431, 0.278431, 1 )
 
-[node name="TemplateCharacter" parent="." instance=ExtResource( 3 )]
-position = Vector2( 467.288, 134.873 )
+[node name="SecurityCams" type="Node2D" parent="."]
 
-[node name="SecurityCamera" parent="." instance=ExtResource( 4 )]
-position = Vector2( 656, 272 )
-rotation = 1.57079
-
-[node name="SecurityCamera2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 64, 384 )
-
-[node name="SecurityCamera3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 944, 72 )
-rotation = 1.57079
+[node name="Guards" type="Node2D" parent="."]
