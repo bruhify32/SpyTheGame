@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Levels/TemplateLevel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Character/NPCs/SecurityCamera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Character/guard.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Levels/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/LockedDoor.tscn" type="PackedScene" id=5]
 
 [node name="Level1" instance=ExtResource( 1 )]
 
@@ -62,17 +63,17 @@ rotation = 3.64275
 [node name="Door" parent="Doors" index="0" instance=ExtResource( 4 )]
 position = Vector2( 416, 168 )
 
-[node name="Door2" parent="Doors" index="1" instance=ExtResource( 4 )]
-position = Vector2( 288, 480 )
-
-[node name="Door3" parent="Doors" index="2" instance=ExtResource( 4 )]
-position = Vector2( 416, 1056 )
-rotation = 1.57079
-
-[node name="Door5" parent="Doors" index="3" instance=ExtResource( 4 )]
+[node name="Door5" parent="Doors" index="1" instance=ExtResource( 4 )]
 position = Vector2( 1176, 736 )
 rotation = 1.57079
 
-[node name="Door4" parent="Doors" index="4" instance=ExtResource( 4 )]
+[node name="Door4" parent="Doors" index="2" instance=ExtResource( 4 )]
 position = Vector2( 1080, 350.149 )
 rotation = 1.57079
+
+[node name="LockedDoor" parent="LockedDoors" index="0" instance=ExtResource( 5 )]
+position = Vector2( 288, 480 )
+
+[node name="LockedDoor2" parent="LockedDoors" index="1" instance=ExtResource( 5 )]
+position = Vector2( 416, 1056 )
+rotation = -1.57079

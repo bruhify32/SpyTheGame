@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://GFX/Interface/PNG/metalPanel.png" type="Texture" id=1]
 [ext_resource path="res://GFX/Interface/PNG/glassPanel.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://GFX/Interface/PNG/metalPanel_redCorner.png" type="Texture" id=9]
 [ext_resource path="res://GFX/Interface/PNG/metalPanel_yellowCorner.png" type="Texture" id=10]
 [ext_resource path="res://GFX/Interface/PNG/metalPanel_blueCorner.png" type="Texture" id=11]
+[ext_resource path="res://UI/Numpad.gd" type="Script" id=12]
 
 [sub_resource type="DynamicFont" id=3]
 size = 20
@@ -48,11 +49,11 @@ texture = ExtResource( 11 )
 region_rect = Rect2( 0, 0, 100, 100 )
 
 [node name="Numpad" type="Popup"]
-visible = true
 margin_right = 64.0
 margin_bottom = 72.0
 rect_min_size = Vector2( 300, 400 )
 theme = SubResource( 2 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -97,23 +98,27 @@ patch_margin_top = 4
 patch_margin_right = 4
 patch_margin_bottom = 4
 
-[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/DisplayContainer"]
+[node name="Display" type="Label" parent="NinePatchRect/VBoxContainer/DisplayContainer"]
 margin_left = 100.0
 margin_top = 36.0
 margin_right = 180.0
 margin_bottom = 63.0
+size_flags_horizontal = 3
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Test"
+align = 1
 
 [node name="ButtonContainer" type="CenterContainer" parent="NinePatchRect/VBoxContainer"]
 margin_top = 150.0
 margin_right = 280.0
-margin_bottom = 322.0
+margin_bottom = 355.0
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect/VBoxContainer/ButtonContainer"]
-margin_left = 76.0
-margin_right = 204.0
-margin_bottom = 172.0
+margin_left = 65.0
+margin_right = 215.0
+margin_bottom = 205.0
+custom_constants/vseparation = 15
+custom_constants/hseparation = 15
 columns = 3
 
 [node name="Button1" type="Button" parent="NinePatchRect/VBoxContainer/ButtonContainer/GridContainer"]
@@ -123,87 +128,87 @@ rect_min_size = Vector2( 40, 40 )
 text = "1"
 
 [node name="Button2" type="Button" parent="NinePatchRect/VBoxContainer/ButtonContainer/GridContainer"]
-margin_left = 44.0
-margin_right = 84.0
+margin_left = 55.0
+margin_right = 95.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 40, 40 )
 text = "2"
 
 [node name="Button3" type="Button" parent="NinePatchRect/VBoxContainer/ButtonContainer/GridContainer"]
-margin_left = 88.0
-margin_right = 128.0
+margin_left = 110.0
+margin_right = 150.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 40, 40 )
 text = "3"
 
 [node name="Button4" type="Button" parent="NinePatchRect/VBoxContainer/ButtonContainer/GridContainer"]
-margin_top = 44.0
+margin_top = 55.0
 margin_right = 40.0
-margin_bottom = 84.0
+margin_bottom = 95.0
 rect_min_size = Vector2( 40, 40 )
 text = "4"
 
 [node name="Button5" type="Button" parent="NinePatchRect/VBoxContainer/ButtonContainer/GridContainer"]
-margin_left = 44.0
-margin_top = 44.0
-margin_right = 84.0
-margin_bottom = 84.0
+margin_left = 55.0
+margin_top = 55.0
+margin_right = 95.0
+margin_bottom = 95.0
 rect_min_size = Vector2( 40, 40 )
 text = "5"
 
 [node name="Button6" type="Button" parent="NinePatchRect/VBoxContainer/ButtonContainer/GridContainer"]
-margin_left = 88.0
-margin_top = 44.0
-margin_right = 128.0
-margin_bottom = 84.0
+margin_left = 110.0
+margin_top = 55.0
+margin_right = 150.0
+margin_bottom = 95.0
 rect_min_size = Vector2( 40, 40 )
 text = "6"
 
 [node name="Button7" type="Button" parent="NinePatchRect/VBoxContainer/ButtonContainer/GridContainer"]
-margin_top = 88.0
+margin_top = 110.0
 margin_right = 40.0
-margin_bottom = 128.0
+margin_bottom = 150.0
 rect_min_size = Vector2( 40, 40 )
 text = "7"
 
 [node name="Button8" type="Button" parent="NinePatchRect/VBoxContainer/ButtonContainer/GridContainer"]
-margin_left = 44.0
-margin_top = 88.0
-margin_right = 84.0
-margin_bottom = 128.0
+margin_left = 55.0
+margin_top = 110.0
+margin_right = 95.0
+margin_bottom = 150.0
 rect_min_size = Vector2( 40, 40 )
 text = "8"
 
 [node name="Button9" type="Button" parent="NinePatchRect/VBoxContainer/ButtonContainer/GridContainer"]
-margin_left = 88.0
-margin_top = 88.0
-margin_right = 128.0
-margin_bottom = 128.0
+margin_left = 110.0
+margin_top = 110.0
+margin_right = 150.0
+margin_bottom = 150.0
 rect_min_size = Vector2( 40, 40 )
 text = "9"
 
 [node name="StatusLight" type="TextureRect" parent="NinePatchRect/VBoxContainer/ButtonContainer/GridContainer"]
-margin_top = 132.0
+margin_top = 165.0
 margin_right = 40.0
-margin_bottom = 172.0
+margin_bottom = 205.0
 texture = ExtResource( 7 )
 expand = true
 
 [node name="Button10" type="Button" parent="NinePatchRect/VBoxContainer/ButtonContainer/GridContainer"]
-margin_left = 44.0
-margin_top = 132.0
-margin_right = 84.0
-margin_bottom = 172.0
+margin_left = 55.0
+margin_top = 165.0
+margin_right = 95.0
+margin_bottom = 205.0
 rect_min_size = Vector2( 40, 40 )
 text = "0"
 
 [node name="ButtonOK" type="Button" parent="NinePatchRect/VBoxContainer/ButtonContainer/GridContainer"]
-margin_left = 88.0
-margin_top = 132.0
-margin_right = 128.0
-margin_bottom = 172.0
+margin_left = 110.0
+margin_top = 165.0
+margin_right = 150.0
+margin_bottom = 205.0
 rect_min_size = Vector2( 40, 40 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
-text = "ok"
+text = "OK"
