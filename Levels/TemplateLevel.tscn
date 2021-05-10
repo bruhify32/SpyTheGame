@@ -152,6 +152,7 @@ tile_data = PoolIntArray( 0, 2, 0, 1, 2, 2, 2, 2, 2, 3, 2, 2, 4, 2, 2, 5, 2, 1, 
 
 [node name="Furniture" type="TileMap" parent="Navigation2D"]
 tile_set = SubResource( 10 )
+collision_mask = 5
 format = 1
 
 [node name="Player" parent="." instance=ExtResource( 2 )]

@@ -82,3 +82,6 @@ rotation = -1.57079
 [node name="Computer" parent="Computers" index="0" instance=ExtResource( 6 )]
 position = Vector2( 160, 160 )
 rotation = -1.57079
+lock_group = "1"
+
+[connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor" method="_on_Computer_combination"]
