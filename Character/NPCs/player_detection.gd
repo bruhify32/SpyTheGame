@@ -15,6 +15,7 @@ func _ready():
 func _process(delta):
 	if player_in_fov() and player_in_los():
 		torch.color = RED;
+		get_tree().call_group("SuspicionMeter","player_seen");
 	else:
 		torch.color = WHITE;
 
