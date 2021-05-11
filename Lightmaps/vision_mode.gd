@@ -28,11 +28,15 @@ func night_vision_mode():
 	color = NIGHT_VISION;
 	audio_stream_player.stream = night_vision_sound;
 	audio_stream_player.play();
+	get_tree().call_group("lights","hide");
+	get_tree().call_group("labels","show");
 
 func dark_mode():
 	color = DARK;
 	audio_stream_player.stream = dark_mode_sound;
 	audio_stream_player.play();
-	
+	get_tree().call_group("lights","show");
+	get_tree().call_group("labels","hide");
+
 func _on_Timer_timeout():
 	cooldown = false;
