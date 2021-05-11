@@ -24,6 +24,7 @@ export var no_of_disguises : int = 3;
 
 func _ready():
     timer.wait_time = disguise_duration;
+    get_tree().call_group("DisguiseDisplay","update_disguises",no_of_disguises);
     reveal();
 
 func _physics_process(delta):
@@ -78,7 +79,12 @@ func disguise():
     disguised_label.show();
     velocity_multiplier = disguise_slowdown;
     no_of_disguises -= 1;
+    get_tree().call_group("DisguiseDisplay","update_disguises",no_of_disguises);
     disguised = true;
     collision_layer = 16;
     timer.start();
 
+func collect_briefcase():
+    var loot : Node2D = Node2D.new();
+    loot.set_name("BriefCase");
+    add_child(loot);

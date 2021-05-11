@@ -174,4 +174,6 @@ current = true
 
 [node name="Computers" type="Node2D" parent="."]
 
+[node name="Loots" type="Node2D" parent="."]
+
 [node name="GUI" parent="." instance=ExtResource( 5 )]
