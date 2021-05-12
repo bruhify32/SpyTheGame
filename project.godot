@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 CombinationGenerator="*res://Levels/combination_generator.gd"
+Bgm="*res://Music/BGM.tscn"
 
 [input]
 
