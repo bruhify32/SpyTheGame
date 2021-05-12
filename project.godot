@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="SpyTheGame"
-run/main_scene="res://Levels/Level1.tscn"
+run/main_scene="res://Levels/Lobby.tscn"
 config/icon="res://icon.png"
 
 [autoload]
