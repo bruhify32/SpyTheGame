@@ -4,6 +4,6 @@
 
 [node name="BGM" type="AudioStreamPlayer2D"]
 stream = ExtResource( 1 )
-volume_db = -10.0
+volume_db = -3.0
 autoplay = true
 attenuation = 0.00866851
