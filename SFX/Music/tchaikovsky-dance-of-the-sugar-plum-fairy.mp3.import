@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tchaikovsky-dance-of-the-sugar-plum-fairy.mp3-0ef750cb94caf7c1b014a4ec20ea6c66.mp3str"
+
+[deps]
+
+source_file="res://SFX/Music/tchaikovsky-dance-of-the-sugar-plum-fairy.mp3"
+dest_files=[ "res://.import/tchaikovsky-dance-of-the-sugar-plum-fairy.mp3-0ef750cb94caf7c1b014a4ec20ea6c66.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

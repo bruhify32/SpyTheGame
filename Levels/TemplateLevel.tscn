@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Tiles/TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Character/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GFX/Tilesheet/tilesheet_complete.png" type="Texture" id=3]
 [ext_resource path="res://Lightmaps/VisionMode.tscn" type="PackedScene" id=4]
 [ext_resource path="res://UI/GUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/Exit.tscn" type="PackedScene" id=6]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 14.0498, 11.8171, 13.7708, 11.259, 48.3768, 11.259, 52.0049, 14.8871, 55.912, 15.7242, 58.4238, 47.5396, 56.1912, 53.1212, 10.1426, 54.5166, 5.39819, 47.8186, 5.67737, 15.1661, 11.259, 15.1661 )
@@ -177,3 +178,5 @@ current = true
 [node name="Loots" type="Node2D" parent="."]
 
 [node name="GUI" parent="." instance=ExtResource( 5 )]
+
+[node name="Exit" parent="." instance=ExtResource( 6 )]
