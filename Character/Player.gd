@@ -88,3 +88,4 @@ func collect_briefcase():
     var loot : Node2D = Node2D.new();
     loot.set_name("BriefCase");
     add_child(loot);
+    get_tree().call_group("Loot","collect_loot");
