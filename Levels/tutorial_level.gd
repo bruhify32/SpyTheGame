@@ -6,9 +6,12 @@ func _ready():
 func update_pointer_positions(object_number):
 	var pointer : Sprite = $ObjectivePointer;
 	var place : Position2D = $ObjectivePositions.get_child(object_number);
+	var messages : Node2D = $ObjectiveMessage.get_child(object_number);
+
 	$Tween.interpolate_property(pointer,"position",pointer.position,
 		place.position,0.5,Tween.TRANS_SINE,Tween.EASE_IN_OUT);
 	$Tween.start();
+	$TutorialGUI/Control/NinePatchRect/Label.text = messages.message;
 
 func _on_MoveObjective_body_entered(body):
 	update_pointer_positions(1);
