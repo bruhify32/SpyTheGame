@@ -11,6 +11,7 @@ func update_pointer_positions(object_number):
 	$Tween.interpolate_property(pointer,"position",pointer.position,
 		place.position,0.5,Tween.TRANS_SINE,Tween.EASE_IN_OUT);
 	$Tween.start();
+	$TutorialGUI/AnimationPlayer.play("Message");
 	$TutorialGUI/Control/NinePatchRect/Label.text = messages.message;
 
 func _on_MoveObjective_body_entered(body):

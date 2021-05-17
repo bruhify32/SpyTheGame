@@ -137,7 +137,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="NightVissionObjective3" type="Area2D" parent="ObjectiveAreas" index="2"]
-position = Vector2( 768, 0 )
+position = Vector2( 792, -8 )
 collision_layer = 0
 __meta__ = {
 "_edit_group_": true
